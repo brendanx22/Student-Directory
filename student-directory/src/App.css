@@ -1,0 +1,251 @@
+body{
+    font-family: "Avenir Next World", "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+}
+*{
+    box-sizing:border-box;
+}
+
+
+.page{
+    padding: 15px 25px;
+    margin-top: 0;
+}
+.students-container{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap:20px;
+    padding:5px 10px;
+    width:100%;
+    max-width: 100%;
+    transition:transform 0.2s ease;
+    
+}
+.students-container :hover{
+    background-color: #e5e5e5;
+    transform:scale(1.03);
+    
+}
+
+
+
+
+
+.filter-areas{
+    display:flex;
+    gap:15px;
+    align-items: center;
+    justify-content: center;
+    width:700px;
+    margin :0 auto;
+    margin-bottom: 20px;
+    max-width: 100%;
+    
+    
+}
+
+.loading-page{
+    text-align: center;
+    margin-top: 60px;
+}
+.loading-page svg{
+    width:120px;
+    height:120px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+.loading-state{
+    font-size:35px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.user-not-found{
+    font-size:40px;
+    font-weight:bold;
+    text-align: center;
+    margin-top: 60px;
+
+}
+
+
+.user-not-found svg{
+    width:100px;
+    height:100px;
+    
+
+}
+.internet-loss-page svg{
+    width:60px;
+    height:60px;
+}
+.internet-loss-page{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}
+.error-page{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+}
+.error-page svg{
+    width:90px;
+    height:90px;
+    color: #6B7280;
+}
+.error-page h3{
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+.error-page p{
+    margin-top: 5px;
+    font-size: 25px;
+    color: #374151;
+}
+
+/*Responsive code */
+
+/* MOBILE */
+@media (max-width:600px){
+         .page{ 
+        padding:15px;
+     } 
+    
+    .filter-areas{ 
+        width:100%; 
+        flex-direction:column; 
+        max-width: 100%;
+        gap:10px;
+    } 
+    
+    
+     .students-container{
+         grid-template-columns:1fr;
+          padding:5px 0; 
+     } 
+     .loading-state{ 
+        font-size:25px; 
+    }
+    .internet-loss-page{
+         font-size:22px; 
+    } 
+    .error-page{ 
+        font-size:35px; 
+    } 
+    .error-page p{ 
+        font-size:20px; 
+    } 
+    .error-page svg{ 
+        width:70px; height:70px;
+     }
+      .user-not-found{
+         font-size:25px; 
+    } 
+}
+
+/* TABLET */
+@media (min-width:601px) and (max-width:900px){
+     .students-container{
+         grid-template-columns:repeat(2, 1fr); 
+      } 
+      .filter-areas{ 
+        width:90%;
+      } 
+      .search-input{
+         width:100%; 
+      } 
+}
+
+/* DESKTOP */
+@media (min-width:901px) and (max-width:1199px){ 
+    .students-container{
+         grid-template-columns:repeat(3, 1fr);
+     } 
+}
+
+/* WIDE SCREEN */
+@media (min-width:1200px){ 
+    .students-container{
+        grid-template-columns:repeat(3, 1fr); 
+    } 
+}
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+
+@media (max-width:380px){
+
+
+    .page{
+        padding:10px;
+    }
+
+    
+    .filter-areas{
+        width:100%;
+        max-width: 100%;
+        padding: 0;
+        gap:10px;
+    }
+
+   
+   
+
+    .students-container{
+        padding:5px 0;
+        gap:10px;
+    }
+
+   
+
+
+    .loading-state{
+        font-size:20px;
+    }
+
+    .loading-page svg{
+        width:80px;
+        height:80px;
+    }
+
+    .internet-loss-page{
+        font-size:18px;
+    }
+
+    .internet-loss-page svg{
+        width:45px;
+        height:45px;
+    }
+
+    .error-page{
+        font-size:28px;
+    }
+
+    .error-page p{
+        font-size:17px;
+    }
+
+    .error-page svg{
+        width:60px;
+        height:60px;
+    }
+
+    .user-not-found{
+        font-size:20px;
+    }
+
+    .user-not-found svg{
+        width:70px;
+        height:70px;
+    }
+}

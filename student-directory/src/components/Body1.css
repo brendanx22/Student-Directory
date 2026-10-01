@@ -1,0 +1,42 @@
+.body1{
+    padding:0 15px;
+    text-align: center;
+    margin-top: 0;
+}
+.body1 h2{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color:#CC0039;
+}
+.body1 p{
+    font-size: 20px;
+    color:#6B7280;
+}
+.body1 p{
+    margin-top: 5px;
+    font-size:18px;
+
+}
+/*Responsive code */
+@media (max-width:600px){
+     .body1 h2{ 
+        font-size:35px; 
+    } 
+    .body1 p{ 
+        font-size:16px; 
+    } 
+}
+@media (max-width:380px){
+
+.body1{
+        padding:0 5px;
+    }
+
+    .body1 h2{
+        font-size:28px;
+    }
+
+    .body1 p{
+        font-size:14px;
+    }
+}
